@@ -1,0 +1,38 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+
+@media screen and (min-width: 480px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+}
+
+
+.avtar {
+    background: lightseagreen;
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    position: relative;
+    top: 13px;
+    font-weight: bold;
+}

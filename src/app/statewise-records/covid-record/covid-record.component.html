@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">Coronavirus Highlights [COVID-19]</mat-toolbar>
+<mat-card *ngIf="total">
+    <mat-card-header>
+        <mat-chip-list aria-label="Fish selection">
+            <mat-chip color="accent" selected>{{total.state}}</mat-chip>
+            <mat-chip color="accent" selected>Confirmed - {{total.confirmed}}</mat-chip>
+            <mat-chip color="accent" selected>Active - {{total.active}}</mat-chip>
+            <mat-chip color="accent" selected>Recovered - {{total.recovered}}</mat-chip>
+            <mat-chip color="accent" selected>Deaths - {{total.deaths}}</mat-chip>
+            <mat-chip color="accent" selected>Last Updated - {{total.lastupdatedtime}}</mat-chip>
+        </mat-chip-list>
+    </mat-card-header>
+</mat-card>
+<div class="grid-container">
+    <mat-card *ngFor="let s of statewiseData">
+        <mat-card-header>
+            <div mat-card-avatar class="avtar"><span>{{s.statecode}}</span></div>
+            <mat-card-title>{{s.state}}</mat-card-title>
+            <mat-card-subtitle>Confirmed - {{s.confirmed}} </mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>
