@@ -5,6 +5,9 @@
     grid-gap: 10px;
 }
 
+mat-card{
+    background-image: linear-gradient(to top,#ff9999,#ff6666);
+}
 
 @media screen and (min-width: 480px) {
     .grid-container {

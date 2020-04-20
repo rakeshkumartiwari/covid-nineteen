@@ -13,4 +13,9 @@ export class StatewiseService {
       .get('https://api.covid19india.org/data.json')
       .pipe(map(data => data['statewise']));
   }
+
+  getWorldData() {
+    return this.http.get('https://energ.ee/covid19-us-api/states.json');
+  }
+
 }

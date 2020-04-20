@@ -14,7 +14,11 @@ export class StatewiseRecordsComponent implements OnInit {
   ngOnInit() {
     this.statewiseService.getData().subscribe(data => {
       this.statewiseData = data;
-      console.log(this.statewiseData);
+      // console.log(this.statewiseData);
+    });
+
+    this.statewiseService.getWorldData().subscribe(data => {
+      console.log('Data: ', data);
     });
 
   }
