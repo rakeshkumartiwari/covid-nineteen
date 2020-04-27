@@ -1,6 +1,27 @@
-<mat-toolbar color="primary">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+        <a routerLink="/listView" class="navbar-brand">Coronavirus Highlights [COVID-19]</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-div">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbar-div" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a routerLink="/listView" class="nav-link">List View</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/chartView" class="nav-link">Chart View</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- <mat-toolbar color="primary">
     Coronavirus Highlights [COVID-19]
     <a mat-button routerLink="/listView" routerLinkActive>List View</a>
     <a mat-button routerLink="/chartView" routerLinkActive>Chart View</a>
-</mat-toolbar>
+</mat-toolbar> -->
 <router-outlet></router-outlet>
