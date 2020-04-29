@@ -26,7 +26,7 @@ export class ChartReportComponent implements OnInit {
         const c = [];
         this.statewiseData.forEach((item) => {
           d.push(+item.confirmed);
-          l.push(item.statecode);
+          l.push(item.state);
           c.push(this.makeRandomColor());
         });
         this.data = d;
@@ -46,7 +46,7 @@ export class ChartReportComponent implements OnInit {
     let myChart = new Chart(this.ctx, {
       type: 'doughnut',
       data: {
-        labels: [],
+        labels: this.labels,
         datasets: [{
           data: this.data,
           backgroundColor: this.colors,
@@ -56,7 +56,7 @@ export class ChartReportComponent implements OnInit {
       options: {
         responsive: true,
         legend: {
-          position: 'top',
+          display: false
         },
         animation: {
           animateScale: true,
