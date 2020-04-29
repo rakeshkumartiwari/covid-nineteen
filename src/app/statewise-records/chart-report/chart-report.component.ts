@@ -27,7 +27,12 @@ export class ChartReportComponent implements OnInit {
         this.statewiseData.forEach((item) => {
           d.push(+item.confirmed);
           l.push(item.state);
-          c.push(this.makeRandomColor());
+
+          if (item.statecode === 'MH') {
+            c.push('red');
+          } else {
+            c.push(this.makeRandomColor());
+          }
         });
         this.data = d;
         this.labels = l;
