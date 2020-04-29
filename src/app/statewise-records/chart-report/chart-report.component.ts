@@ -27,7 +27,7 @@ export class ChartReportComponent implements OnInit {
         this.statewiseData.forEach((item) => {
           d.push(+item.confirmed);
           l.push(item.state);
-          c.push(this.makeRandomColor())
+          c.push(this.makeRandomColor());
         });
         this.data = d;
         this.labels = l;
@@ -44,24 +44,41 @@ export class ChartReportComponent implements OnInit {
     this.canvas = document.getElementById('myChart');
     this.ctx = this.canvas.getContext('2d');
     let myChart = new Chart(this.ctx, {
-      type: 'pie',
+      type: 'horizontalBar',
       data: {
         labels: this.labels,
         datasets: [{
-          label: '# of Votes',
+          label: 'Highest One',
           data: this.data,
           backgroundColor: this.colors,
           borderWidth: 1
         }]
       },
       options: {
-        responsive: false,
-        display: true
+        scaleShowValues: true,
+        responsive: true,
+        scales: {
+          yAxes: [{
+            stacked: true,
+            gridLines: {
+              display: false,
+            },
+            ticks: {
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            stacked: true,
+            gridLines: {
+              display: false
+            }
+          }],
+        }
       }
     });
   }
   makeRandomColor() {
-    return '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6);
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
   }
 
 }

@@ -6,7 +6,9 @@
 }
 
 mat-card{
-    background-image: linear-gradient(to top,#ff9999,#ff6666);
+    /* background-image: linear-gradient(to top,#ff9999,#ff6666); */
+    background: rgb(180,58,151);
+background: linear-gradient(90deg, rgba(180,58,151,0.9248074229691877) 0%, rgba(234,44,109,0.9332107843137255) 50%, rgba(252,69,146,0.8855917366946778) 100%);
 }
 
 @media screen and (min-width: 480px) {
