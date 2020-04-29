@@ -27,7 +27,6 @@ export class ChartReportComponent implements OnInit {
         this.statewiseData = records.slice(1);
         const d = [];
         const l = [];
-        const c = [];
         this.statewiseData.forEach((item) => {
           d.push(+item.confirmed);
           l.push(item.state);
