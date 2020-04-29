@@ -26,7 +26,7 @@ export class ChartReportComponent implements OnInit {
         const c = [];
         this.statewiseData.forEach((item) => {
           d.push(+item.confirmed);
-          l.push(item.state);
+          l.push(item.statecode);
           c.push(this.makeRandomColor());
         });
         this.data = d;
@@ -44,35 +44,23 @@ export class ChartReportComponent implements OnInit {
     this.canvas = document.getElementById('myChart');
     this.ctx = this.canvas.getContext('2d');
     let myChart = new Chart(this.ctx, {
-      type: 'horizontalBar',
+      type: 'doughnut',
       data: {
-        labels: this.labels,
+        labels: [],
         datasets: [{
-          label: 'Highest One',
           data: this.data,
           backgroundColor: this.colors,
           borderWidth: 1
         }]
       },
       options: {
-        scaleShowValues: true,
         responsive: true,
-        scales: {
-          yAxes: [{
-            stacked: true,
-            gridLines: {
-              display: false,
-            },
-            ticks: {
-              beginAtZero: true
-            }
-          }],
-          xAxes: [{
-            stacked: true,
-            gridLines: {
-              display: false
-            }
-          }],
+        legend: {
+          position: 'top',
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
         }
       }
     });
