@@ -13,7 +13,11 @@ export class ChartReportComponent implements OnInit {
   statewiseData: any[];
   data: any[];
   labels: any[];
-  colors: any[];
+  colors = ['#ff0000', '#00FFFF', '#7FFFD4', '#0000FF', '#8A2BE2', '#7FFF00', '#5F9EA0', '#FF7F50',
+    '#008B8B', '#B8860B', '#006400', '#BDB76B', '#556B2F', '#E9967A', '#483D8B', '#FF1493',
+    '#00BFFF', '#FFD700', '#CD5C5C', '#ADFF2F', '#F0E68C', '#FFB6C1', '#87CEFA', '#800000',
+    '#BA55D3', '#00FA9A', '#C71585', '#191970', '#808000', '#FFA500', '#DB7093', '#AFEEEE',
+    '#CD853F', '#800080', '#BC8F8F', '#FA8072', '#FFFF00'];
 
   constructor(private statewiseService: StatewiseService) { }
 
@@ -27,16 +31,9 @@ export class ChartReportComponent implements OnInit {
         this.statewiseData.forEach((item) => {
           d.push(+item.confirmed);
           l.push(item.state);
-
-          if (item.statecode === 'MH') {
-            c.push('red');
-          } else {
-            c.push(this.makeRandomColor());
-          }
         });
         this.data = d;
         this.labels = l;
-        this.colors = c;
         this.chartMaker();
       }
 
@@ -44,8 +41,6 @@ export class ChartReportComponent implements OnInit {
   }
 
   chartMaker() {
-    console.log('data : ', this.data);
-    console.log('labels : ', this.labels);
     this.canvas = document.getElementById('myChart');
     this.ctx = this.canvas.getContext('2d');
     let myChart = new Chart(this.ctx, {
@@ -69,9 +64,6 @@ export class ChartReportComponent implements OnInit {
         }
       }
     });
-  }
-  makeRandomColor() {
-    return '#' + Math.floor(Math.random() * 16777215).toString(16);
   }
 
 }
