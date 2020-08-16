@@ -6,7 +6,17 @@
 }
 
 mat-card {
-    background: #fff;
+    background: #272727;
+    color: #fff;
+    border-radius: 0 !important;
+}
+
+mat-card-subtitle{
+    color:#fff
+}
+
+mat-chip{
+    font-weight: bold;
 }
 
 @media screen and (min-width: 480px) {
@@ -38,7 +48,7 @@ mat-card {
 
 
 .avtar {
-    background: red;
+    background: #0a8e38;
     color: #fff;
     display: flex;
     justify-content: center;
