@@ -1,13 +1,12 @@
-
 <mat-card *ngIf="total">
     <mat-card-header>
-        <mat-chip-list aria-label="Fish selection">
-            <mat-chip color="primary" selected>{{total.state}}</mat-chip>
-            <mat-chip color="primary" selected>Confirmed - {{total.confirmed}}</mat-chip>
-            <mat-chip color="primary" selected>Active - {{total.active}}</mat-chip>
-            <mat-chip color="primary" selected>Recovered - {{total.recovered}}</mat-chip>
-            <mat-chip color="primary" selected>Deaths - {{total.deaths}}</mat-chip>
-            <mat-chip color="primary" selected>Last Updated - {{total.lastupdatedtime}}</mat-chip>
+        <mat-chip-list>
+            <mat-chip>{{total.state}}</mat-chip>
+            <mat-chip>Confirmed - {{total.confirmed}}</mat-chip>
+            <mat-chip>Active - {{total.active}}</mat-chip>
+            <mat-chip>Recovered - {{total.recovered}}</mat-chip>
+            <mat-chip>Deaths - {{total.deaths}}</mat-chip>
+            <mat-chip>Last Updated - {{total.lastupdatedtime}}</mat-chip>
         </mat-chip-list>
     </mat-card-header>
 </mat-card>

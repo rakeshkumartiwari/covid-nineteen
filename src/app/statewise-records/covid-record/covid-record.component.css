@@ -6,8 +6,7 @@
 }
 
 mat-card {
-    background: rgb(180, 58, 151);
-    background: linear-gradient(90deg, rgba(180, 58, 151, 0.9248074229691877) 0%, rgba(234, 44, 109, 0.9332107843137255) 50%, rgba(252, 69, 146, 0.8855917366946778) 100%);
+    background: #fff;
 }
 
 @media screen and (min-width: 480px) {
@@ -39,7 +38,8 @@ mat-card {
 
 
 .avtar {
-    background: lightseagreen;
+    background: red;
+    color: #fff;
     display: flex;
     justify-content: center;
 }

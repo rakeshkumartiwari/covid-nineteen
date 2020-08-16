@@ -18,6 +18,7 @@ export class ChartReportComponent implements OnInit {
     '#00BFFF', '#FFD700', '#CD5C5C', '#ADFF2F', '#F0E68C', '#FFB6C1', '#87CEFA', '#800000',
     '#BA55D3', '#00FA9A', '#C71585', '#191970', '#808000', '#FFA500', '#DB7093', '#AFEEEE',
     '#CD853F', '#800080', '#BC8F8F', '#FA8072', '#FFFF00'];
+  displayData = [];
 
   constructor(private statewiseService: StatewiseService) { }
 
@@ -27,7 +28,10 @@ export class ChartReportComponent implements OnInit {
         this.statewiseData = records.slice(1);
         const d = [];
         const l = [];
+
         this.statewiseData.forEach((item) => {
+          this.displayData.push(`${item.state}(${item.confirmed})`);
+
           d.push(+item.confirmed);
           l.push(item.state);
         });

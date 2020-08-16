@@ -4,9 +4,9 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-3 mb-2 ml-5" *ngFor="let label of labels; let i = index"
+        <div class="col-sm-3 mb-2 ml-5" *ngFor="let display of displayData; let i = index"
             [ngStyle]="{'border-left': '25px solid'+ colors[i]}">
-            {{label}}
+            {{display}}
         </div>
     </div>
 </div>
