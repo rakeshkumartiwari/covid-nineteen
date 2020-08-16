@@ -1,16 +1,16 @@
-<mat-card *ngIf="total">
-    <mat-card-header>
-        <mat-chip-list>
-            <mat-chip>{{total.state}}</mat-chip>
-            <mat-chip>Confirmed - {{total.confirmed}}</mat-chip>
-            <mat-chip>Active - {{total.active}}</mat-chip>
-            <mat-chip>Recovered - {{total.recovered}}</mat-chip>
-            <mat-chip>Deaths - {{total.deaths}}</mat-chip>
-            <mat-chip>Last Updated - {{total.lastupdatedtime}}</mat-chip>
-        </mat-chip-list>
-    </mat-card-header>
-</mat-card>
 <div class="grid-container">
+    <mat-card *ngIf="total" class="my-header">
+        <mat-card-header>
+            <mat-chip-list>
+                <mat-chip>{{total.state}}</mat-chip>
+                <mat-chip>Confirmed - {{total.confirmed}}</mat-chip>
+                <mat-chip>Active - {{total.active}}</mat-chip>
+                <mat-chip>Recovered - {{total.recovered}}</mat-chip>
+                <mat-chip>Deaths - {{total.deaths}}</mat-chip>
+                <mat-chip>Last Updated - {{total.lastupdatedtime}}</mat-chip>
+            </mat-chip-list>
+        </mat-card-header>
+    </mat-card>
     <mat-card *ngFor="let s of statewiseData">
         <mat-card-header>
             <div mat-card-avatar class="avtar"><span>{{s.statecode}}</span></div>

@@ -19,7 +19,7 @@ export class StatewiseRecordsComponent implements OnInit {
     });
 
     this.statewiseService.getWorldData().subscribe(data => {
-      console.log('Data: ', data);
+      // console.log('Data: ', data);
     });
 
   }

@@ -5,6 +5,10 @@
     grid-gap: 10px;
 }
 
+.my-header{
+    grid-column: 1/4;
+}
+
 mat-card {
     background: #272727;
     color: #fff;
@@ -26,6 +30,11 @@ mat-chip{
         padding: 10px;
         grid-gap: 10px;
     }
+
+    .my-header{
+        grid-column: 1/4;
+    }
+    
 }
 
 @media screen and (max-width: 600px) {
@@ -35,6 +44,9 @@ mat-chip{
         padding: 10px;
         grid-gap: 10px;
     }
+    .my-header{
+        grid-column: 1/3;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -43,6 +55,9 @@ mat-chip{
         grid-template-columns: auto;
         padding: 10px;
         grid-gap: 10px;
+    }
+    .my-header{
+        grid-column: 1/2;
     }
 }
 
